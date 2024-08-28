@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	
+    int n, digit, sumn = 0;
+    scanf("%d", &n);    // Read in user input n as an integer (%d)
+    
+    //Complete the code to calculate the sum of the five digits on n.
+    
+    // Sample input n = 10564
+    
+    while(n > 0){
+        
+        digit = n % 10;
+        
+        sumn += digit;         // Mod division to get the remainder of the number, n.
+                
+        n /= 10;           // Remove the last digit from the number.
+        
+        // printf("%d", sum);
+
+    }
+    
+    printf("%d", sumn);
+        
+    return 0;
+}
