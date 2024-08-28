@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    
+    char num[1000];     // Initialize string, num, with max size len(num) as per constraints
+    
+    int i,freq[10]={0};
+    
+    // scanf("%[^\n]", num); // Scanf using scanset. Alternative to --> scanf("%s", num);
+    
+    scanf("%s", num);        // Read in user input for the string, num.
+    
+    for(i=0; i < strlen(num); i++){
+        
+        if(num[i]>= '0' && num[i] <= '9'){  /* Declare the range to search through in 
+                                                the string num of size i */       
+            freq[num[i] - '0']++;        
+        }
+    }
+    for(i=0; i<10; i++){  
+        printf("%d\t", freq[i]);
+    }
+    
+    return 0;
+}
